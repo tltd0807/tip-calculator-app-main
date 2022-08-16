@@ -1,0 +1,236 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* CSS RESET END  HERE*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  box-sizing: border-box;
+}
+.header {
+  width: fit-content;
+  margin: 40px auto;
+  letter-spacing: 0.5rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+}
+.calculator {
+  font-size: 18px;
+  background-color: white;
+  width: 15rem;
+  margin: auto;
+  padding: 25px 20px;
+}
+.card {
+  border-radius: 15px;
+}
+.calc {
+  padding: 0 5px;
+}
+.calclator-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 20px;
+  box-sizing: border-box;
+  /* height: 2.5rem; */
+}
+.input-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: hsl(184, 14%, 56%);
+  margin-bottom: 10px;
+}
+.calculator-select-tip {
+  margin: 10px 0 20px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.tip {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  width: 6.5rem;
+  height: 2.5rem;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+.custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.custom::placeholder {
+  text-align: center;
+}
+.input-container {
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.calc-input {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  text-align: right;
+  padding: 7px 0;
+  border-radius: 5px;
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.3rem;
+}
+
+.sumption {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px 20px;
+  color: white;
+  color: hsl(172, 67%, 45%);
+}
+.sump-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.sump {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+.label-name {
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: white;
+}
+.divde {
+  font-size: 12px;
+  font-weight: bold;
+  color: hsl(186, 14%, 43%);
+}
+.btn-reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+/* active state */
+input {
+  outline: none;
+}
+
+.btn-reset:hover,
+.tip:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+.tip:hover {
+  color: hsl(183, 100%, 15%);
+}
+.tip-active {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+.custom-active {
+  border: 2px solid hsl(172, 67%, 45%);
+  background-color: hsl(189, 41%, 97%);
+}
+.error-message {
+  font-size: 14px;
+  color: red;
+  display: inline;
+}
+.calc-input:focus,
+.custom:active,
+.custom:focus {
+  cursor: pointer;
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.custom:hover,
+.custom:focus {
+  background-color: hsl(189, 41%, 97%);
+}
+
+@media (min-width: 1200px) {
+  .calculator {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .calc {
+    width: 45%;
+  }
+  .sumption {
+    width: 45%;
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+  .calculator-select-tip {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+.input-error,
+.input-error:focus {
+  border: 2px solid red;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1 class="header">
+      <div>SPLI</div>
+      <div>TTER</div>
+    </h1>
+    <div class="calculator card">
+      <div class="calc">
+        <div class="calclator-input">
+          <label class="input-name">Bill</label>
+          <div class="input-container">
+            <label for="bill-input">
+              <img
+                src="./images/icon-dollar.svg"
+                alt=""
+                srcset=""
+                class="input-icon"
+            /></label>
+            <input type="number" class="calc-input" id="bill-input" />
+          </div>
+        </div>
+        <label class="input-name">Select Tip %</label>
+        <div class="calculator-select-tip">
+          <button class="tip">5%</button>
+          <button class="tip">10%</button>
+          <button class="tip">15%</button>
+          <button class="tip">25%</button>
+          <button class="tip">50%</button>
+          <input type="number" class="tip custom" placeholder="Custom" />
+        </div>
+
+        <div class="calclator-input">
+          <label class="input-name">Number of People</label>
+          <label class="error-message hidden">Can't be zero</label>
+          <div class="input-container">
+            <label for="people-input">
+              <img
+                src="./images/icon-person.svg"
+                alt=""
+                srcset=""
+                class="input-icon"
+            /></label>
+            <input type="number" class="calc-input" id="people-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="sumption card">
+        <div class="sump-content">
+          <div class="sump-label">
+            <div class="label-name">Tip Amount</div>
+            <div class="divde">/ person</div>
+          </div>
+          <div class="sump">$0.00</div>
+
+          <div class="sump-label">
+            <div class="label-name">Total</div>
+            <div class="divde">/ person</div>
+          </div>
+          <div class="sump">$0.00</div>
+        </div>
+        <button class="btn-reset">RESET</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
